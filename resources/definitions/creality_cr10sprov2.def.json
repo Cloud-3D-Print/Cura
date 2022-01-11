@@ -1,0 +1,22 @@
+{
+    "name": "Creality CR-10S Pro V2",
+    "version": 2,
+    "inherits": "creality_cr10",
+    "overrides": {
+        "machine_name": { "default_value": "Creality CR-10S Pro V2" },
+        "machine_head_with_fans_polygon": { "default_value": [
+                [-44, 34],
+                [-44, -34],
+                [38, -34],
+                [38, 34]
+            ]
+        },
+        "gantry_height": { "value": 30 }
+
+    },
+    "metadata": {
+        "quality_definition": "creality_base",
+        "platform": "creality_cr10spro.stl",
+        "platform_offset": [ -150, 0, 150]
+    }
+}
