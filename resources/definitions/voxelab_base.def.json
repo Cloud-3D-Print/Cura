@@ -1,0 +1,43 @@
+{
+    "name": "Voxelab Base Printer",
+    "version": 2,
+    "inherits": "fdmprinter",
+    "metadata": {
+        "visible": false,
+        "author": "cloud3dprint.com",
+        "manufacturer": "Voxelab",
+        "file_formats": "text/x-gcode",
+        "machine_extruder_trains": {
+            "0": "voxelab_base_extruder_0"
+            }
+        },
+    "has_materials": true,
+    "has_variants": true,
+    "has_machine_quality": true,
+    "variants_name": "Nozzle Size",
+
+    "preferred_variant_name": "0.4mm Nozzle",
+    "preferred_quality_type": "standard",
+    "preferred_material": "generic_pla",
+
+    "overrides": {
+        "machine_name": { "default_value": "Voxelab Base Printer" },
+        "machine_start_gcode": { "default_value": ";start gcode\nM140 S60 T0\nM104 S200 T0\nM104 S0 T1\nG90" },
+        "machine_end_gcode": { "default_value": ";end gcode\nM104 S0 T0\nM140 S0 T0\nG1 Z20.000 F1800\nG28 X Y\nM18" },
+        "machine_max_feedrate_x": { "value": 500},
+        "machine_max_feedrate_y": { "value": 500},
+        "machine_max_feedrate_z": { "value": 10},
+        "machine_max_feedrate_e": { "value": 100},
+
+        "machine_max_acceleration_x": { "value": 500 },
+        "machine_max_acceleration_y": { "value": 500 },
+        "machine_max_acceleration_z": { "value": 100 },
+        "machine_max_acceleration_e": { "value": 1000 },
+
+        "machine_heated_bed": { "default_value": true },
+
+        "material_diameter": { "default_value": 1.75 },
+
+        "gantry_height": { "default_value": 29.6 }
+        }
+}
